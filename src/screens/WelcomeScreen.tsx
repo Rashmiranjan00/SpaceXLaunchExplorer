@@ -1,8 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import { ThemedText, ThemedView } from "../components";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { ThemedText, ThemedView } from '../components';
+import { getLaunchPads } from '../redux/launchPads/launchPadsActions';
 
 function WelcomeScreen() {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getLaunchPads({ limit: 10, offset: 0 }));
+    }, []);
+
     return (
         <Container>
             <Title>Hello World</Title>

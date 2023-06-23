@@ -12,9 +12,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2BFF4CDD63664671ADA8693F /* maisonneue-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 146EA2670D7A40FD8D60B2A8 /* maisonneue-bold.otf */; };
 		7699B88040F8A987B510C191 /* libPods-SpaceXLaunchExplorer-SpaceXLaunchExplorerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-SpaceXLaunchExplorer-SpaceXLaunchExplorerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		2BFF4CDD63664671ADA8693F /* maisonneue-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 146EA2670D7A40FD8D60B2A8 /* maisonneue-bold.otf */; };
 		B891E024DFD8417E865F467A /* ttcommons-medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1D728F7F5BF4D1A8A103AF0 /* ttcommons-medium.otf */; };
 		D8E5B11B66E24CDB951E1D7F /* ttcommons-regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F092B892FC1647D3B1673F60 /* ttcommons-regular.otf */; };
 /* End PBXBuildFile section */
@@ -39,6 +39,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpaceXLaunchExplorer/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SpaceXLaunchExplorer/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SpaceXLaunchExplorer/main.m; sourceTree = "<group>"; };
+		146EA2670D7A40FD8D60B2A8 /* maisonneue-bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "maisonneue-bold.otf"; path = "../assets/fonts/maisonneue-bold.otf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-SpaceXLaunchExplorer-SpaceXLaunchExplorerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpaceXLaunchExplorer-SpaceXLaunchExplorerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-SpaceXLaunchExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchExplorer.debug.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchExplorer/Pods-SpaceXLaunchExplorer.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-SpaceXLaunchExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchExplorer.release.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchExplorer/Pods-SpaceXLaunchExplorer.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,10 +47,9 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-SpaceXLaunchExplorer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpaceXLaunchExplorer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SpaceXLaunchExplorer/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-SpaceXLaunchExplorer-SpaceXLaunchExplorerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpaceXLaunchExplorer-SpaceXLaunchExplorerTests.release.xcconfig"; path = "Target Support Files/Pods-SpaceXLaunchExplorer-SpaceXLaunchExplorerTests/Pods-SpaceXLaunchExplorer-SpaceXLaunchExplorerTests.release.xcconfig"; sourceTree = "<group>"; };
+		B1D728F7F5BF4D1A8A103AF0 /* ttcommons-medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ttcommons-medium.otf"; path = "../assets/fonts/ttcommons-medium.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		146EA2670D7A40FD8D60B2A8 /* maisonneue-bold.otf */ = {isa = PBXFileReference; name = "maisonneue-bold.otf"; path = "../assets/fonts/maisonneue-bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B1D728F7F5BF4D1A8A103AF0 /* ttcommons-medium.otf */ = {isa = PBXFileReference; name = "ttcommons-medium.otf"; path = "../assets/fonts/ttcommons-medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F092B892FC1647D3B1673F60 /* ttcommons-regular.otf */ = {isa = PBXFileReference; name = "ttcommons-regular.otf"; path = "../assets/fonts/ttcommons-regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F092B892FC1647D3B1673F60 /* ttcommons-regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ttcommons-regular.otf"; path = "../assets/fonts/ttcommons-regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +144,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9E0427E39C12415D997A6087 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				146EA2670D7A40FD8D60B2A8 /* maisonneue-bold.otf */,
+				B1D728F7F5BF4D1A8A103AF0 /* ttcommons-medium.otf */,
+				F092B892FC1647D3B1673F60 /* ttcommons-regular.otf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,17 +165,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		9E0427E39C12415D997A6087 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				146EA2670D7A40FD8D60B2A8 /* maisonneue-bold.otf */,
-				B1D728F7F5BF4D1A8A103AF0 /* ttcommons-medium.otf */,
-				F092B892FC1647D3B1673F60 /* ttcommons-regular.otf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 

@@ -1,8 +1,8 @@
-import React from "react";
-import { type StyleProp, type TextStyle } from "react-native";
-import styled from "styled-components";
+import React from 'react';
+import { type StyleProp, type TextStyle } from 'react-native';
+import styled from 'styled-components';
 
-type ThemeType = "primary" | "secondary";
+type ThemeType = 'primary' | 'secondary';
 interface IThemedText {
     type?: ThemeType;
     style?: StyleProp<TextStyle>;
@@ -11,7 +11,7 @@ interface IThemedText {
 
 const ThemedText: React.FC<IThemedText> = ({
     children,
-    type = "primary",
+    type = 'primary',
     style,
     ...props
 }) => (
@@ -20,11 +20,11 @@ const ThemedText: React.FC<IThemedText> = ({
     </StyledText>
 );
 
-const StyledText = styled.text<{ type: ThemeType }>`
+const StyledText = styled.Text<{ type: ThemeType }>`
     ${({ theme }) => theme.typography.label_med_md};
 
     color: ${({ theme, type }): string =>
-        type === "primary"
+        type === 'primary'
             ? theme.core.content_primary
             : theme.core.content_secondary};
 `;

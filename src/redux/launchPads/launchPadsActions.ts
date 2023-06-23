@@ -1,13 +1,13 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { useQuery } from "@apollo/client";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { useQuery } from '@apollo/client';
 
-import { LunchPadsActionTypes } from "./launchPadsActionTypes";
+import { LunchPadsActionTypes } from './launchPadsActionTypes';
 import {
     type LaunchPads,
     GET_LAUNCHPADS,
-    type GetLaunchPadsVars
-} from "./launchPadsModel";
-import { setLoading } from "./launchPadsSlice";
+    type GetLaunchPadsVars,
+} from './launchPadsModel';
+import { setLoading } from './launchPadsSlice';
 
 export const getLaunchPads = createAsyncThunk(
     LunchPadsActionTypes.getLaunchPads,
@@ -19,15 +19,17 @@ export const getLaunchPads = createAsyncThunk(
         >(GET_LAUNCHPADS, {
             variables: {
                 limit,
-                offset
-            }
+                offset,
+            },
         });
+        console.log('HERE');
+
         // eslint-disable-next-line no-console
-        console.log("LOADING", loading);
+        console.log('LOADING', loading);
         // eslint-disable-next-line no-console
-        console.log("DATA", data);
+        console.log('DATA', data);
         // eslint-disable-next-line no-console
-        console.log("ERROR", error);
+        console.log('ERROR', error);
         dispatch(setLoading(false));
-    }
+    },
 );
