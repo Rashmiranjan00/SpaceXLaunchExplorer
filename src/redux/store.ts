@@ -1,4 +1,4 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import {
     FLUSH,
     PAUSE,
@@ -7,23 +7,24 @@ import {
     persistStore,
     PURGE,
     REGISTER,
-    REHYDRATE,
-} from 'redux-persist';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+    REHYDRATE
+} from "redux-persist";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+import LaunchPadsReducer from "./launchPads/launchPadsSlice";
 
 export const mainPersistConfig = {
-    key: 'main',
+    key: "main",
     version: 1,
-    storage: AsyncStorage,
+    storage: AsyncStorage
 };
 
-export const persistedMainReducer = persistCombineReducers(
-    mainPersistConfig,
-    {},
-);
+export const persistedMainReducer = persistCombineReducers(mainPersistConfig, {
+    launchPads: LaunchPadsReducer
+});
 
 const rootReducer = combineReducers({
-    main: persistedMainReducer,
+    main: persistedMainReducer
 });
 
 const store = configureStore({
@@ -38,12 +39,12 @@ const store = configureStore({
                     PAUSE,
                     PERSIST,
                     PURGE,
-                    REGISTER,
+                    REGISTER
                 ],
-                warnAfter: 100,
+                warnAfter: 100
             },
-            immutableCheck: { warnAfter: 100 },
-        }),
+            immutableCheck: { warnAfter: 100 }
+        })
 });
 
 export const persistor = persistStore(store);

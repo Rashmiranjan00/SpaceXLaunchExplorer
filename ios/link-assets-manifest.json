@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/maisonneue-bold.otf",
+      "sha1": "f892cb3678d5094ecbdc71ba6a43915c23250055"
+    },
+    {
+      "path": "assets/fonts/ttcommons-medium.otf",
+      "sha1": "4ecb906d2ecee38553f3a11bd647ac19dd8cfd17"
+    },
+    {
+      "path": "assets/fonts/ttcommons-regular.otf",
+      "sha1": "ff1ecb72de649cb238e17dbcc4dd2b0c2f9690d7"
+    }
+  ]
+}

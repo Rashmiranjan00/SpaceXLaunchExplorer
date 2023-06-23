@@ -1,16 +1,16 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export enum AsyncStorageKeys {
-    UserToken = 'user_token',
+    UserToken = "user_token"
 }
 
 // If a valid string is passed then only it is stored, else key is removed
 const setToken = async (
     key: string,
-    token?: string | null,
+    token?: string | null
 ): Promise<boolean> => {
     try {
-        if (typeof token === 'string' && token !== '') {
+        if (typeof token === "string" && token !== "") {
             await AsyncStorage.setItem(key, token);
         } else {
             await AsyncStorage.removeItem(key);
