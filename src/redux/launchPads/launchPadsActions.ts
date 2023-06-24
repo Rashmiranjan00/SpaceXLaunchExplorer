@@ -13,8 +13,10 @@ export const getLaunchPads = createAsyncThunk(
     LunchPadsActionTypes.getLaunchPads,
     async ({ limit = 10, offset = 0 }: GetLaunchPadsVars, { dispatch }) => {
         dispatch(setLoading(true));
+        // eslint-disable-next-line no-console
+        console.log('BEFORE API CALL');
         const { loading, data, error } = useQuery<
-            LaunchPads[],
+            Array<LaunchPads>,
             GetLaunchPadsVars
         >(GET_LAUNCHPADS, {
             variables: {
@@ -22,7 +24,8 @@ export const getLaunchPads = createAsyncThunk(
                 offset,
             },
         });
-        console.log('HERE');
+        // eslint-disable-next-line no-console
+        console.log('AFTER API CALL');
 
         // eslint-disable-next-line no-console
         console.log('LOADING', loading);

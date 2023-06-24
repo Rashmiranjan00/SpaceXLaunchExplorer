@@ -1,5 +1,6 @@
+/* eslint-disable */
 import React from 'react';
-import { type StyleProp, type TextStyle } from 'react-native';
+import { Text, StyleProp, TextStyle } from 'react-native';
 import styled from 'styled-components';
 
 type ThemeType = 'primary' | 'secondary';
@@ -15,12 +16,12 @@ const ThemedText: React.FC<IThemedText> = ({
     style,
     ...props
 }) => (
-    <StyledText type={type} {...props}>
+    <StyledText style={style} type={type} {...props}>
         {children}
     </StyledText>
 );
 
-const StyledText = styled.Text<{ type: ThemeType }>`
+const StyledText = styled<{ type: ThemeType }>(Text)`
     ${({ theme }) => theme.typography.label_med_md};
 
     color: ${({ theme, type }): string =>

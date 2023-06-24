@@ -43,7 +43,7 @@
         "react-redux": "^8.1.1",
         "redux": "^4.2.1",
         "redux-persist": "^6.0.0",
-        "styled-components": "^6.0.0-rc.5"
+        "styled-components": "^5.3.11"
     },
     "devDependencies": {
         "@babel/core": "^7.22.5",
@@ -60,6 +60,7 @@
         "@types/metro-config": "^0.76.3",
         "@types/react": "^18.2.13",
         "@types/react-test-renderer": "^18.0.0",
+        "@types/styled-components": "^5.1.26",
         "@typescript-eslint/eslint-plugin": "^5.60.0",
         "@typescript-eslint/parser": "^5.60.0",
         "babel-jest": "^29.2.1",
