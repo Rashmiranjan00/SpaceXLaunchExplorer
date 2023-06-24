@@ -8,7 +8,7 @@ import {
 import { useTheme } from "styled-components";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import MapNavigator from "./MapNavigator";
-import LaunchPadsNavigator from "./LaunchPadsNavigator";
+import LaunchesNavigator from "./LaunchesNavigator";
 import { tabRoutes, mainRoutes } from "../shared/routes";
 import colorScheme from "../hooks/colorScheme";
 import { isTablet } from "../util/ScreenHelper";
@@ -100,10 +100,10 @@ export function BottomTabNavigator() {
             }>
             <BottomTab.Screen
                 name={tabRoutes.launchTab}
-                component={LaunchPadsNavigator}
+                component={LaunchesNavigator}
                 options={
                     {
-                        title: "LaunchPads",
+                        title: "Launches",
                         headerShown: false,
                         tabBarAllowFontScaling: false,
                         ...tabOptionStyle,

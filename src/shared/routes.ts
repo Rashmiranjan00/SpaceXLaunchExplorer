@@ -20,8 +20,8 @@ export const mapRoutes = {
     home: "map"
 } as const;
 
-export const launchPadsRoutes = {
-    home: "launchpads"
+export const launchesRoutes = {
+    home: "launches"
 } as const;
 
 export default {
