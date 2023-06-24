@@ -1,15 +1,15 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { launchPadsRoutes } from "../shared/routes";
-import { LaunchPadsScreen } from "../screens/LaunchPads/index";
+import { launchesRoutes } from "../shared/routes";
+import { LaunchesScreen } from "../screens/Launches/index";
 
 const LaunchPadsStack = createNativeStackNavigator();
 
 const LaunchPadsNavigator = () => (
     <LaunchPadsStack.Navigator screenOptions={{ headerShown: false }}>
         <LaunchPadsStack.Screen
-            name={launchPadsRoutes.home}
-            component={LaunchPadsScreen}
+            name={launchesRoutes.home}
+            component={LaunchesScreen}
         />
     </LaunchPadsStack.Navigator>
 );

@@ -12,6 +12,7 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import LaunchPadsReducer from "./launchPads/launchPadsSlice";
+import LaunchesReducer from "./launches/launchesSlice";
 
 export const mainPersistConfig = {
     key: "main",
@@ -20,7 +21,8 @@ export const mainPersistConfig = {
 };
 
 export const persistedMainReducer = persistCombineReducers(mainPersistConfig, {
-    launchPads: LaunchPadsReducer
+    launchPads: LaunchPadsReducer,
+    launches: LaunchesReducer
 });
 
 const rootReducer = combineReducers({
