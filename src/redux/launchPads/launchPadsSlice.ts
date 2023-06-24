@@ -1,9 +1,13 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import { type LaunchPadsState, type LaunchPads } from "./launchPadsModel";
+import {
+    type LaunchPadsState,
+    type LaunchPads
+} from "./launchPadModels/launchPadsModel";
 
 export const initialState: LaunchPadsState = {
     launchPads: [],
-    loading: false
+    loading: false,
+    error: undefined
 };
 
 export const LaunchPadsSlice = createSlice({

@@ -1,17 +1,23 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-
 import { ThemedText, ThemedView } from "../../components";
-import { getLaunchPads } from "../../redux/launchPads/launchPadsActions";
 
 import SafeAreaWrapper from "../../navigators/ScreenSafeAreaWrapper";
+import { useLaunchPads } from "../../hooks/useLaunchPads";
+import { getLaunchPads } from "../../redux/launchPads/launchPadsActions";
 
 const LaunchPadsScreen = () => {
     const dispatch = useDispatch();
+    const { launchPads } = useLaunchPads();
     useEffect(() => {
-        dispatch(getLaunchPads({ limit: 10, offset: 0 }));
-    }, [dispatch]);
+        if (launchPads)
+            dispatch(
+                getLaunchPads({
+                    launchPads
+                })
+            );
+    }, [launchPads, dispatch]);
 
     return (
         <Wrapper>

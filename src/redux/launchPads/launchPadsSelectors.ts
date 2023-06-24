@@ -1,5 +1,8 @@
 import { type RootState } from "../store";
-import { type LaunchPadsState, type LaunchPads } from "./launchPadsModel";
+import {
+    type LaunchPadsState,
+    type LaunchPads
+} from "./launchPadModels/launchPadsModel";
 
 const base = (state: RootState) => state.main || ({} as RootState["main"]);
 
@@ -10,4 +13,4 @@ export const selectLaunchPads = (state: RootState): LaunchPads[] | null =>
     selectLaunchPadsState(state).launchPads;
 
 export const selectLoading = (state: RootState): boolean =>
-    selectLaunchPadsState(state).loading || false;
+    selectLaunchPadsState(state).loading ?? false;
