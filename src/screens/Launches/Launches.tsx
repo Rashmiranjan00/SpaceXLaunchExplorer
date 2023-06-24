@@ -4,20 +4,20 @@ import { useDispatch } from "react-redux";
 import { ThemedText, ThemedView } from "../../components";
 
 import SafeAreaWrapper from "../../navigators/ScreenSafeAreaWrapper";
-import { useLaunchPads } from "../../hooks/useLaunchPads";
-import { getLaunchPads } from "../../redux/launchPads/launchPadsActions";
+import { useLaunches } from "../../hooks/useLaunches";
+import { getLaunches } from "../../redux/launches/launchesActions";
 
-const LaunchPadsScreen = () => {
+const Launches = () => {
     const dispatch = useDispatch();
-    const { launchPads } = useLaunchPads();
+    const { launches } = useLaunches();
     useEffect(() => {
-        if (launchPads)
+        if (launches)
             dispatch(
-                getLaunchPads({
-                    launchPads
+                getLaunches({
+                    launches
                 })
             );
-    }, [launchPads, dispatch]);
+    }, [launches, dispatch]);
 
     return (
         <Wrapper>
@@ -34,10 +34,10 @@ const Title = styled(ThemedText)`
     ${({ theme }) => theme.typography.heading_special_lg};
 `;
 
-const SafeAreaLaunchPadsScreen = () => (
+const SafeAreaLaunches = () => (
     <SafeAreaWrapper>
-        <LaunchPadsScreen />
+        <Launches />
     </SafeAreaWrapper>
 );
 
-export default SafeAreaLaunchPadsScreen;
+export default SafeAreaLaunches;
