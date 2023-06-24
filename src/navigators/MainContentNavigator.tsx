@@ -13,7 +13,12 @@ import { tabRoutes, mainRoutes } from "../shared/routes";
 import colorScheme from "../hooks/colorScheme";
 import { isTablet } from "../util/ScreenHelper";
 import { DeviceTheme } from "../util/Theme";
-import { NavLaunchFilled, NavLaunchOutlined } from "../components/icons";
+import {
+    NavLaunchFilled,
+    NavLaunchOutlined,
+    NavMapFilled,
+    NavMapOutlined
+} from "../components/icons";
 
 const MainContentStack = createNativeStackNavigator();
 
@@ -135,11 +140,11 @@ export function BottomTabNavigator() {
                         /* eslint-disable-next-line react/no-unstable-nested-components */
                         tabBarIcon: props =>
                             props.focused ? (
-                                <NavLaunchFilled
+                                <NavMapFilled
                                     color={theme.NavBar.icon_fill_color}
                                 />
                             ) : (
-                                <NavLaunchOutlined
+                                <NavMapOutlined
                                     color={theme.NavBar.icon_outline_color}
                                 />
                             )

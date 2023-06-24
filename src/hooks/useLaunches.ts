@@ -17,7 +17,7 @@ export const useLaunches = (): Result => {
 
     useEffect(() => {
         // eslint-disable-next-line @typescript-eslint/no-floating-promises
-        fetchLaunches();
+        fetchLaunches({ variables: { limit: 10, offset: 0 } });
     }, [fetchLaunches]);
     return {
         launches,
