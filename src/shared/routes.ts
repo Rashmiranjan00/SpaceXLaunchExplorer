@@ -16,7 +16,14 @@ export const tabRoutes = {
     profileTab: "profile_tab"
 } as const;
 
+export const mapRoutes = {
+    home: "map"
+} as const;
+
+export const launchPadsRoutes = {
+    home: "launchpads"
+} as const;
+
 export default {
-    welcome: "welcome" as const,
     main: mainRoutes
 };

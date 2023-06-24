@@ -1,7 +1,7 @@
 import * as React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import routes from "../shared/routes";
-import WelcomeScreen from "../screens/WelcomeScreen";
+import MainContentNavigator from "./MainContentNavigator";
 
 const AppStack = createNativeStackNavigator();
 
@@ -15,11 +15,12 @@ function AppNavigator({ initialRouteName }: AppNavigatorProps) {
         <AppStack.Navigator
             initialRouteName={initialRouteName}
             screenOptions={{ headerShown: false }}>
-            <AppStack.Screen
-                name={routes.welcome}
-                component={WelcomeScreen}
-                options={{ animation: "fade" }}
-            />
+            <AppStack.Group screenOptions={{ animation: "slide_from_right" }}>
+                <AppStack.Screen
+                    name={routes.main.home}
+                    component={MainContentNavigator}
+                />
+            </AppStack.Group>
         </AppStack.Navigator>
     );
 }

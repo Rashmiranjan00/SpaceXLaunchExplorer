@@ -1,3 +1,15 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react-native",
+        "lib": ["es6", "es7", "dom", "esnext"],
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "noEmit": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true
+    },
+    "extends": "@tsconfig/react-native/tsconfig.json",
+    "exclude": ["**/node_modules/lottie-react-native/**"]
 }
