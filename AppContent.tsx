@@ -14,7 +14,7 @@ const AppContent: React.FC = () => {
     return (
         <StyledGestureHandlerRootView>
             <AppWrapper>
-                <AppNavigator initialRouteName={routes.welcome} />
+                <AppNavigator initialRouteName={routes.main.home} />
             </AppWrapper>
         </StyledGestureHandlerRootView>
     );
