@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { loadUserToken } from "./AsyncStore";
+import { loadUserToken } from "../util/AsyncStore";
 
 // eslint-disable-next-line
 export async function getApolloClient(): Promise<ApolloClient<any>> {

@@ -17,7 +17,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { NavigationContainer } from "@react-navigation/native";
 
 // Utils
-import { getApolloClient } from "./src/util/ApolloClient";
+import { getApolloClient } from "./src/apollo/ApolloClient";
 import { DeviceTheme, getTheme } from "./src/util/Theme";
 import colorScheme from "./src/hooks/colorScheme";
 import store, { persistor } from "./src/redux/store";
