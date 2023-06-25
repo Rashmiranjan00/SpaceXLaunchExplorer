@@ -1,27 +1,59 @@
-import { useEffect } from "react";
-import { type ApolloError, useLazyQuery } from "@apollo/client";
+/* eslint-disable */
+import { useEffect, useState } from 'react';
+import { type ApolloError, useQuery } from '@apollo/client';
 
-import { type Launches } from "../redux/launches/launchesModels/launchesModel";
+import {
+    type GetLaunchesVars,
+    type LaunchesDataType,
+} from '../redux/launches/launchesModels/launchesModel';
 
-import { FETCH_LAUNCHES } from "../apollo/queries/fetchLaunches";
+import { FETCH_LAUNCHES } from '../apollo/queries/fetchLaunches';
 
 interface Result {
-    launches?: Launches[];
+    launches?: LaunchesDataType;
     loading: boolean;
     error: ApolloError | undefined;
+    loadMore: () => void;
 }
 
 export const useLaunches = (): Result => {
-    const [fetchLaunches, { data: launches, loading, error }] =
-        useLazyQuery<Launches[]>(FETCH_LAUNCHES);
+    const [currentPage, setCurrentPage] = useState<number>(1);
+
+    const {
+        data: launches,
+        loading,
+        error,
+        fetchMore,
+    } = useQuery<LaunchesDataType, GetLaunchesVars>(FETCH_LAUNCHES, {
+        variables: { limit: 10, offset: 0 },
+    });
 
     useEffect(() => {
-        // eslint-disable-next-line @typescript-eslint/no-floating-promises
-        fetchLaunches();
-    }, [fetchLaunches]);
+        if (!loading && currentPage !== 1) {
+            fetchMore({
+                variables: {
+                    limit: 10,
+                    offset: currentPage,
+                },
+            });
+        }
+    }, [currentPage, loading]);
+
+    const loadMore = () => {
+        console.log('here');
+        if (loading) {
+            return;
+        }
+
+        if (currentPage * 10 === launches?.launches.length) {
+            setCurrentPage(prevState => prevState + 1);
+        }
+    };
+
     return {
         launches,
         loading,
-        error
+        error,
+        loadMore,
     };
 };

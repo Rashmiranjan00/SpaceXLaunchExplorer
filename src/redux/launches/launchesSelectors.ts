@@ -12,5 +12,5 @@ export const selectLaunchesState = (state: RootState): LaunchesState =>
 export const selectLaunches = (state: RootState): Launches[] | null =>
     selectLaunchesState(state).launches;
 
-export const selectLoading = (state: RootState): boolean =>
+export const selectLaunchesLoading = (state: RootState): boolean =>
     selectLaunchesState(state).loading ?? false;

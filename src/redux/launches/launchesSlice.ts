@@ -7,7 +7,9 @@ import {
 export const initialState: LaunchesState = {
     launches: [],
     loading: false,
-    error: undefined
+    error: undefined,
+    currentPage: 1,
+    endOfData: false
 };
 
 export const LaunchesSlice = createSlice({
@@ -18,7 +20,7 @@ export const LaunchesSlice = createSlice({
             return { ...state, loading: payload };
         },
         setLaunches: (state, { payload }: PayloadAction<Launches[]>) => {
-            return { ...state, Launches: payload };
+            return { ...state, launches: payload };
         }
     }
 });
