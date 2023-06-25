@@ -21,7 +21,8 @@ export const mapRoutes = {
 } as const;
 
 export const launchesRoutes = {
-    home: "launches"
+    home: "launches",
+    launchDetails: "launch_details"
 } as const;
 
 export default {

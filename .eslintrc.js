@@ -59,6 +59,7 @@ module.exports = {
             },
         ],
         'react/function-component-definition': 0,
+        'import/no-named-as-default': 0,
         'no-use-before-define': 'off',
         'import/no-extraneous-dependencies': [
             'error',

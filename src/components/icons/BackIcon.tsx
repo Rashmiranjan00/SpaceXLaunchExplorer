@@ -1,23 +1,9 @@
-/* eslint-disable */
-import React from 'react';
-import { SvgXml } from 'react-native-svg';
-import { type IconProps } from './types';
-import { Colors, DeviceTheme, Theme } from '../../util/Theme';
-import colorScheme from '../../hooks/colorScheme';
+import type React from "react";
+import { withTheme } from "styled-components";
+import CreateIcon, { type IconProps } from "./CreateIcon";
+import BackSVG from "./svgs/Back.svg";
 
-const BackIcon = (): React.ReactElement => {
-    const displayMode = colorScheme();
-    const svgMarkup = `<svg
-        xmlns="http://www.w3.org/2000/Svg"
-        width={32}
-        height={32}
-        viewBox="0 0 32 32">
-        <path d="M9 16L19 6L20.4 7.4L11.8 16L20.4 24.6L19 26L9 16Z" fill=${
-            displayMode === DeviceTheme.Light ? Colors.gray_90 : Colors.gray_10
-        }/>
-  </svg>  
-  `;
-    return <SvgXml xml={svgMarkup} />;
-};
+const BackIcon: React.FC<IconProps> = ({ ...props }) =>
+    CreateIcon(BackSVG)({ ...props });
 
-export default BackIcon;
+export default withTheme(BackIcon);
