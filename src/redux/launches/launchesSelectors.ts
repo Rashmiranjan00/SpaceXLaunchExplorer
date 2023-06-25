@@ -1,4 +1,6 @@
+import { createSelector } from "@reduxjs/toolkit";
 import { type RootState } from "../store";
+
 import {
     type LaunchesState,
     type Launches
@@ -14,3 +16,8 @@ export const selectLaunches = (state: RootState): Launches[] | null =>
 
 export const selectLaunchesLoading = (state: RootState): boolean =>
     selectLaunchesState(state).loading ?? false;
+
+export const selectLaunchById = (launchId: string) =>
+    createSelector(selectLaunches, launches => {
+        return launches.find(({ id }) => id === launchId);
+    });

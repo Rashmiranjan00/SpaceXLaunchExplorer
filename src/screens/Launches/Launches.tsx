@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-
 import { ThemedView } from "../../components";
 import SafeAreaWrapper from "../../navigators/ScreenSafeAreaWrapper";
 import { useLaunches } from "../../hooks/useLaunches";

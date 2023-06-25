@@ -2,20 +2,35 @@
 import React from "react";
 import { View, TouchableOpacity, Text } from "react-native";
 import styled from "styled-components";
+import { CommonActions, useNavigation } from "@react-navigation/native";
+
 import { s2, s4, s5 } from "../../../util/Sizes";
 import { ThemedText } from "../../../components";
 import { type Launches } from "../../../redux/launches/launchesModels/launchesModel";
 import { convertUTCDateToLocalDate } from "../../../shared/dateHelper";
+import { launchesRoutes } from "../../../shared/routes";
 
 interface LaunchCardProps {
     launches: Launches;
 }
 
 const LaunchCard = ({ launches }: LaunchCardProps) => {
-    const { launch_success, launch_date_utc, mission_name } = launches;
+    const navigation = useNavigation();
+
+    const { launch_success, launch_date_utc, mission_name, id } = launches;
     const date = convertUTCDateToLocalDate(new Date(launch_date_utc));
+
+    const navigateToLaunchDetails = () => {
+        navigation.dispatch(
+            CommonActions.navigate({
+                name: launchesRoutes.launchDetails,
+                params: { launchId: id }
+            })
+        );
+    };
+
     return (
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity onPress={navigateToLaunchDetails}>
             <Container>
                 <ContentWrapper>
                     <DetailsPrimaryText>
