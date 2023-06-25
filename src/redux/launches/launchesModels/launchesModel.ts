@@ -12,6 +12,19 @@ export interface LaunchesState {
     launches: Launches[];
     loading?: boolean;
     error?: ApolloError | undefined;
+    currentPage: number;
+    endOfData: boolean;
+}
+
+export interface LaunchesDataType {
+    launches: {
+        launches: Launches[];
+    };
+}
+
+export interface GetLaunchesVars {
+    limit: number;
+    offset: number;
 }
 
 export interface Launches {

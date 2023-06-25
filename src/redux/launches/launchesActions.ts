@@ -5,9 +5,9 @@ import { setLoading, setLaunches } from "./launchesSlice";
 
 export const getLaunches = createAsyncThunk(
     LaunchesActionTypes.getLaunches,
-    async ({ launches }: LaunchesState, { dispatch }) => {
+    async ({ launches, loading }: LaunchesState, { dispatch }) => {
         dispatch(setLoading(true));
         dispatch(setLaunches(launches));
-        dispatch(setLoading(false));
+        dispatch(setLoading(loading));
     }
 );
