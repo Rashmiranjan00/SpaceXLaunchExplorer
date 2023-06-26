@@ -14,3 +14,8 @@
 -   Put your SVG inside `diff src/components/icons/svgs`.
 -   You can use the CreateIcon.tsx to create themed icons by passing svg and additonal props such as size and color etc.
 -   Refer `diff src/components/CreateIcon.tsx` and `diff src/components/BackIcon.tsx`
+
+# Issues with API
+
+-   Launches API doesn't provide any parameters to handle the pagination(eg. total_count, current_page)
+-   LaunchPads API gives null values for location data. So couldn't implement location pins.
