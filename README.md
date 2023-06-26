@@ -3,17 +3,17 @@
 # Setup
 
 -   Clone the repo from git and install all packages.
--   `sh $ npm install`
+-   `npm install`
 
--   Create a debug.keystore file and add it inside `diff android/app`.
--   Go to `diff /ios` and do a `sh $pod instal`
--   Come back to root folder and run `sh $npm android` or `sh $npm ios` for respetive environments.
+-   Create a `debug.keystore` file and add it inside `diff android/app`.
+-   Go to `/ios` and do a `pod instal`
+-   Come back to the root folder and run `npm android` or `npm ios` for respective environments.
 
 # Icon implementation
 
 -   Put your SVG inside `diff src/components/icons/svgs`.
 -   You can use the CreateIcon.tsx to create themed icons by passing svg and additonal props such as size and color etc.
--   Refer `diff src/components/CreateIcon.tsx` and `diff src/components/BackIcon.tsx`
+-   Refer `src/components/CreateIcon.tsx` and `src/components/BackIcon.tsx`
 
 # Issues with API
 
