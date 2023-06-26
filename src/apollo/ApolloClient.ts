@@ -12,6 +12,7 @@ export async function getApolloClient(): Promise<ApolloClient<any>> {
 
     const authLink = setContext(async (_, { headers }) => {
         // get the authentication token from local storage if it exists
+        // This is required if loing session is integrated in the app.
         const token = await loadUserToken();
         // return the headers to the context so httpLink can read them
         return {

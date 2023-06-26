@@ -33,6 +33,7 @@ function App(): JSX.Element {
     const [activeTheme, setActiveTheme] = useState(currentTheme);
     const [canAutoChangeTheme, setCanAutoChangeTheme] = useState(true);
 
+    // Get and set the Apollo client for provider
     useEffect(() => {
         getApolloClient()
             .then(setClient)
