@@ -28,6 +28,7 @@ export const useLaunches = (): Result => {
         variables: { limit: 10, offset: 0 },
     });
 
+    // Calls the Graphql API.
     useEffect(() => {
         if (!loading && currentPage !== 1) {
             fetchMore({
@@ -39,6 +40,7 @@ export const useLaunches = (): Result => {
         }
     }, [currentPage, loading]);
 
+    // Should be called from end of list for pagination
     const loadMore = () => {
         console.log('here');
         if (loading) {

@@ -6,6 +6,8 @@ import { LaunchDetailsScreen } from "../screens/LaunchDetails";
 
 const LaunchPadsStack = createNativeStackNavigator();
 
+// Navigator for Launches Tab screens
+// Other screens from separate tab can also be added as per requirement
 const LaunchesNavigator = () => (
     <LaunchPadsStack.Navigator screenOptions={{ headerShown: false }}>
         <LaunchPadsStack.Screen

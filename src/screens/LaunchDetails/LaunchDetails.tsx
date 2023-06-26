@@ -27,6 +27,7 @@ const LaunchDetails: React.FC = () => {
         params: { launchId }
     } = useRoute<LaunchDetailRouteProps>();
 
+    // Get the lunch details by using launchId
     const selectedLaunchData = useSelector(selectLaunchById(launchId));
 
     const { mission_name, rocket } = selectedLaunchData as Launches;
